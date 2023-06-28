@@ -12,7 +12,6 @@ urlpatterns = [
     path('blog/', include(('blog.urls', 'blog'))),
     path('logout/', LogoutView.as_view()),
     path('login/', LoginView.as_view()),
-]
+] + static(settings.STATIC_URL, document_root=settings.STATICFILES_DIRS)
 
-if settings.DEBUG:
-    urlpatterns += static(settings.STATIC_URL, document_root=settings.STATICFILES_DIRS)
+
