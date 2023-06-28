@@ -1,0 +1,29 @@
+{% load static %}
+<!DOCTYPE html>
+<html>
+<head>
+    <title>{% block title %}{% endblock %}</title>
+    <link href="{% static "css/blog.css" %}" rel="stylesheet">
+</head>
+    <body>
+        <div id="content">
+            {% block content %}
+            {% endblock %}
+        </div>
+        <div id="sidebar">
+            <header>
+
+            </header>
+            <h2>Мой блог</h2>
+            <p>#blog_text</p>
+                        <div class="reg_panel">
+                    {% if user.is_authenticated %}
+                        <a href="/logout/" >Выход из аккаунта {{ user.name }}</a>
+                    {% else %}
+                        <a href="/login/" style="color: black">Вход в аккаунт</a>
+                        <a href="/blog/register/" style="color: black">Регистрация</a>
+                    {% endif %}
+                </div>
+        </div>
+    </body>
+</html>

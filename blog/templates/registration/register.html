@@ -1,0 +1,15 @@
+{% extends "blog/base.html" %}
+
+{% block content %}
+
+    <div class="container py-5">
+        <h1>Register - по русски регистрация</h1>
+        <form method="POST">
+            {% csrf_token %}
+            {{ register_form }}
+            <button class="btn btn-primary" type="submit">Register</button>
+        </form>
+        <p class="text-center">войди если уже зарегестрировался давно), <a href="/login">ЛОГИН</a> ссылка там слева).</p>
+    </div>
+
+{% endblock %}
