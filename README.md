@@ -1,9 +1,3 @@
-
-# Default users
-
-## (superuser) admin:adminadmin
-
-
 # Django
 
 Написать новостной сайт со страницами:
